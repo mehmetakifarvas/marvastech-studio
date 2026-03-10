@@ -1,0 +1,33 @@
+#define F_CPU 16000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+#include "lcd_i2c.h"
+
+#define LCD_TYPE LCD_16x2   // 16x2 LCD
+#define LCD_I2C_ADDR 0x27   // I2C adress
+
+
+int main(void)
+{
+    lcd_init();
+    
+    int counter = 0;
+    
+    while(1)
+    {
+        lcd_setcursor(0, 0);
+        lcd_print("Marvastech    ");
+        
+        lcd_setcursor(1, 0);
+        lcd_print("Counter: ");
+        lcd_print_int(counter);
+        lcd_print("   ");
+        
+        counter++;
+        _delay_ms(1);
+    }
+}
+
+
+
+

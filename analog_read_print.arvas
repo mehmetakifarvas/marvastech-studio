@@ -1,0 +1,79 @@
+#define F_CPU 16000000UL
+#include <avr/io.h>
+#include <util/delay.h>
+#include <stdlib.h>
+
+// ================= UART =================
+void UART_init(unsigned int ubrr)
+{
+    UBRR0H = (unsigned char)(ubrr >> 8);
+    UBRR0L = (unsigned char)ubrr;
+
+    UCSR0B = (1 << TXEN0);              // TX enable
+    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00); // 8 bit data
+}
+
+void UART_transmit(char data)
+{
+    while (!(UCSR0A & (1 << UDRE0)));
+    UDR0 = data;
+}
+
+void UART_print(char *str)
+{
+    while (*str)
+    {
+        UART_transmit(*str++);
+    }
+}
+
+void UART_println(char *str)
+{
+    while (*str)
+    {
+        UART_transmit(*str++);
+    }
+    UART_transmit('\r');
+    UART_transmit('\n');
+}
+
+// ================= ADC =================
+
+void ADC_init()
+{
+    ADMUX = (1 << REFS0);   // AVcc reference, ADC0 selected
+    ADCSRA = (1 << ADEN)    // ADC enable
+           | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // prescaler 128
+}
+
+uint16_t ADC_read()
+{
+    ADCSRA |= (1 << ADSC);  // start conversion
+    while (ADCSRA & (1 << ADSC)); // wait
+    return ADC;
+}
+
+// ================= MAIN =================
+
+int main(void)
+{
+    UART_init(103);   // 9600 baud @16MHz
+    ADC_init();
+
+    char buffer[10];
+
+    while (1)
+    {
+        uint16_t value = ADC_read();
+        itoa(value, buffer, 10);
+        UART_println(buffer);
+
+        _delay_ms(10);
+    }
+}
+
+
+
+
+
+
