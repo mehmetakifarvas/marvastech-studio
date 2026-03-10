@@ -1,16 +1,32 @@
-MCU = atmega328p
-F_CPU = 16000000UL
-TARGET = main
-SRC = main.c lcd_i2c.c
+# Marvastech Studio
 
-$(TARGET).hex: $(TARGET).elf
-	avr-objcopy -O ihex -R .eeprom $< $@
+**AVR and ARM Development Environment with Serial Plotter**
 
-$(TARGET).elf: $(SRC)
-	avr-gcc -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -o $@ $^
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-red)](https://github.com/sponsors/mehmetakifarvas)
 
-flash:
-	avrdude -c arduino -P /dev/ttyUSB0 -p m328p -U flash:w:$(TARGET).hex
+## 📥 Download Latest Version
 
-clean:
-	rm -f *.o *.elf *.hex
+[**⬇️ Download Marvastech Studio v1.0**](https://github.com/mehmetakifarvas/marvastech-studio/releases/latest)
+
+> ⚠️ **Note:** The main application is proprietary software. This repository contains open source components only.
+
+## 📦 What's in this repository?
+- **AVR Libraries**: Reusable code for LCD (MIT License)
+- **Linker Scripts**: For ARM microcontrollers (Various licenses)
+- **Example Projects**: Sample code for AVR and ARM
+
+## ✨ Features
+- ✅ AVR support (ATmega)
+- ✅ ARM support (STM32)
+- ✅ Real-time serial port plotter
+- ✅ One-click compile and upload
+- ✅ Code editor with syntax highlighting
+- ✅ Portable - runs from USB
+
+## ❤️ Support
+If you find this project useful, please consider [sponsoring me on GitHub](https://github.com/sponsors/mehmetakifarvas)!
+
+## 📧 Contact
+- GitHub: [@mehmetakifarvas](https://github.com/mehmetakifarvas)
+- Email: [marvastech@marvastech.com]
