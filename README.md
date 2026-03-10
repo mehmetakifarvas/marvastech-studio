@@ -1,3 +1,17 @@
+### 👨‍💻 About the Developer
+
+**Mehmet Akif ARVAS (TA1ZFA)**  
+M.Sc. Electronics & Communication Engineer
+
+- 🔧 **Embedded Systems:** Bare-metal, RF Systems, Low-Level Firmware for ARM/AVR
+- 📚 **Author:** 6+ technical books on robotics, electronics, and embedded programming
+- 🎓 **Educator:** Contributed to training many engineers and students
+- 🤖 **Robotics:** Project mentor, competition winner
+- 🏆 **First in Turkey:** Arm processor programming book (first and only in Türkiye)
+
+Currently building **Marvastech Studio** to make AVR/ARM development accessible to everyone.
+
+
 # Marvastech Studio
 ## 📚 Documentation
 - [📖 User Manual (PDF)](https://github.com/mehmetakifarvas/marvastech-studio/releases/latest/download/MARVASTECH-STUDIO.pdf)
@@ -31,4 +45,5 @@ If you find this project useful, please consider [sponsoring me on GitHub](https
 ## 📧 Contact
 - GitHub: [@mehmetakifarvas](https://github.com/mehmetakifarvas)
 - Email: [marvastech@marvastech.com]
+
 
