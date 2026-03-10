@@ -1,5 +1,6 @@
 # Marvastech Studio
-
+## 📚 Documentation
+- [📖 User Manual (PDF)](https://github.com/mehmetakifarvas/marvastech-studio/releases/latest/download/MARVASTECH-STUDIO.pdf)
 **AVR and ARM Development Environment with Serial Plotter**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -30,3 +31,4 @@ If you find this project useful, please consider [sponsoring me on GitHub](https
 ## 📧 Contact
 - GitHub: [@mehmetakifarvas](https://github.com/mehmetakifarvas)
 - Email: [marvastech@marvastech.com]
+
