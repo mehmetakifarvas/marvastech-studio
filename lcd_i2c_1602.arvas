@@ -1,10 +1,8 @@
 #define F_CPU 16000000UL
 #include <avr/io.h>
 #include <util/delay.h>
-#include "lcd_i2c.h"
 
-#define LCD_TYPE LCD_16x2   // 16x2 LCD
-#define LCD_I2C_ADDR 0x27   // I2C adress
+#include "lcd_i2c.h"//You can change the LCD screen type and address in the header file.
 
 
 int main(void)
