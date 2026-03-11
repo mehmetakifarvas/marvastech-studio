@@ -42,9 +42,20 @@ Currently building **Marvastech Studio** to make AVR/ARM development accessible 
 ## ❤️ Support
 If you find this project useful, please consider [sponsoring me on GitHub](https://github.com/sponsors/mehmetakifarvas)!
 
+I created Marvastech Studio out of a personal need for a simple, powerful tool that could handle both AVR and ARM development seamlessly. I wanted a tool that just works, without the hassle of setting up complex toolchains or switching between multiple IDEs. Now, I'm sharing it with the community for free.
+
+Your sponsorship will help me dedicate more time to:
+
+Adding support for new microcontrollers (MCUs).
+Developing more example projects and libraries.
+Creating video tutorials and improving documentation.
+Keeping the software free and ad-free for everyone.
+Every contribution, no matter how small, fuels my motivation and helps sustain this project. Thank you for being here!
+
 ## 📧 Contact
 - GitHub: [@mehmetakifarvas](https://github.com/mehmetakifarvas)
 - Email: [marvastech@marvastech.com]
+
 
 
 
